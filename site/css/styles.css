@@ -1,0 +1,78 @@
+*{margin: 0; padding: 0;}
+.centerHorizont{display: flex; align-items: center;}
+#checkbox_menuTop{display: none;}
+h1,ul,h2,p{margin:0; padding: 0;}
+img{width: 100%;}
+/*-------------------------- MENUTOP --------------------*/
+.container_mt{display: flex; height: 54px; justify-content: space-around;}
+.title_mt h1{font-size: 25px; padding: 12px;}
+.btn_mt{font-size: 25px; display: none; cursor: pointer;}
+.menu_top ul{list-style: none; display: flex; background-color: white;}
+.menu_top ul li a{text-decoration: none; padding: 15px; display: block; color: var(--bs-link-color);}
+.menu_top ul li a:hover{color: #4e17a5;}
+/* SE A JANELA FOR IGUAL OU MENOR A 800px*/
+@media only screen and (max-width: 800px) {
+    /*---------------- MENU TOP ------------------*/
+    .btn_mt{display: flex;}
+    .btn_mt label{cursor: pointer;}
+    .menu_top{display: none;}
+    .container_mt{justify-content: space-between; flex-wrap: wrap; margin: 0 20px 0px 20px}
+    #checkbox_menuTop:checked ~ .menu_top{display: flex; width: 100%; z-index: 1;}
+    .menu_top ul{flex-direction: column; width: 100%;}
+    .menu_top ul li a:hover{background-color: #f5f5f5; color: var(--bs-link-color);}
+    /*----------------BANNER TOP --------------  */
+    .container_bannertp{padding: 10px;}
+    .info_bannertp{padding: 5px;}
+    /*-----------------POST---------------------*/
+    .container_post{padding: 10px;}
+    .info_post{padding: 5px;}
+    .date_post{font-size: clamp(15px, 3vw,15px);}
+    .info_post header h2{font-size: clamp(18px, 4vw,25px); font-weight:500;}
+    .info_post p{font-size: clamp(15px, 3vw,18px); font-weight: 300;}
+}
+/* SE A JANELA FOR IGUAL OU MAIOR A 801px*/
+@media only screen and (min-width: 801px) {
+    /*----------------BANNER TOP --------------  */
+    .containerMain_bannertop{display: flex; justify-content: center;}
+    .container_bannertp{display: flex; max-width: 750px; margin-top: 10px;}
+    .img_bannertp{width: 50%;}
+    .info_bannertp{width: 50%;}
+    /*-----------------POST---------------------*/
+    .containerMain_post{width: 80%;}
+    .container_post{display: flex;}
+    .image_post{width: 500px;}
+    .info_post header h2{font-size: 22px;}
+    .info_post p{font-weight: 300;}
+    /*---------------- MENU RIGHT ---------------- */
+    .containerMenuPost{display: flex; margin: 0 auto; max-width: 850px;}
+    .menu_right{padding: 10px; width: 20%;}
+    /*-------- CAROUSEL -------------------*/
+    .carouselMainWth{margin: 10px;}
+}
+/*-------- CAROUSEL -------------------*/
+.carouselMain{max-width: 750px;}
+.carousel-caption{background-color: rgba(0, 0, 0, 0.308); border-radius: 5px; display: block!important;}
+.carousel-caption a{text-decoration: none;}
+.carousel-control-prev span,.carousel-control-next span{background-color: black; border-radius: 5px; padding: 20px;}
+/*----------------POST --------------  */
+.container_post{margin: 10px;}
+.info_post{padding: 5px;}
+.info_post a{text-decoration: none; padding: 15px 0px 15px 0px; display: block;}
+/*---------------MENU RIGHT------------------*/
+.menu_right{padding: 10px;}
+.menu_right h3{margin-left: 5px; font-size: 20px;}
+.menu_right ul{list-style: none; width: 100%;}
+.menu_right ul li a{text-decoration: none; padding: 10px; display: block;}
+.menu_right ul li a:hover{background-color: #f5f5f5;}
+/* ----------------- FOOTER ------------------------ */
+.container_footer{display: flex; justify-content: space-around; margin: 0 auto; max-width: 800px;}
+.content_footer{margin: 20px; width: 50%;}
+.details_footer{padding: 20px 20px 20px 0px;}
+.redesociais ul{display: flex; margin-top: 30px; list-style: none;}
+.redesociais ul li a{font-size: 30px; margin: 10px;}
+@media only screen and (max-width: 360px) {
+    .container_footer{display: flex; flex-direction: column;}
+    .content_footer{width: 80%;}
+    /* -------------- CAROUSEL ------------------ */
+    .carousel-caption{display: none !important;}
+}
